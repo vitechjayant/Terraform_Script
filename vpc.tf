@@ -5,3 +5,9 @@ resource "aws_vpc" "My-Infra" {
     Name = "My-Infra"
   }
 }
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.My-Infra.id
+  tags = {
+    Name = "AWS-VPC_GW"
+  }
+}

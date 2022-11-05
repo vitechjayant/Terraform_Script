@@ -11,3 +11,7 @@ variable "region" {
 variable "subnet_name_tags" {
     type = list(string)
 }
+
+variable "infra_bucket" {
+    type = string
+}
